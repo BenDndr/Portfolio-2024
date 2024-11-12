@@ -1,0 +1,42 @@
+@import "../../stylesheets/Colors.scss";
+
+nav {
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    // backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 5px 10px rgba(248, 205, 239, 0.2);
+    .inner-nav {
+        margin: auto;
+        max-width: 1320px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        .logo {
+            height: 40px;
+            cursor: pointer;
+        }
+        h2 {
+            color: $blue-500;
+            text-transform: uppercase;
+            text-shadow: 2px -2px 0px $pink-500;
+        }
+        p {
+            color: $blue-500;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media (max-width: 1320px) {
+    nav {
+        .inner-nav {
+        margin: 0 20px;
+        }
+    }
+}
