@@ -22,6 +22,7 @@ function App() {
       </section>
       <section className="pres-container">
         <div className="inner-container">
+        <h2>Qui suis-je ?</h2>
           <div className="inner-half left-pres">
             <div className="pres-card">
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat aut tempore velit, hic dicta voluptates adipisci similique fugit ducimus labore mollitia modi eligendi voluptatibus nihil provident fugiat exercitationem voluptas totam eveniet, optio dolores, id at. Unde repellendus corrupti totam repellat eum? Minus incidunt eum earum hic adipisci porro, repudiandae perspiciatis.</p>
@@ -34,7 +35,7 @@ function App() {
       </section>
       <section className="skills-container">
         <div className="inner-container">
-          <h2>What can I do ?</h2>
+          <h2>Mon expertise</h2>
           <div className="skill-grid">
             <GridCard col={"1/5"} row={"1/2"} imgUrl={"./public/react.svg"}>Javascript/Typescript</GridCard>
             <GridCard col={"1/5"} row={"2/3"} imgUrl={"./public/vite.svg"}>Html/Css</GridCard>
@@ -46,15 +47,17 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="place-holder-div orange">
+      <section className="experience-container">
         <div className="inner-container">
+          <h2>Mon experience</h2>
           <Card />
           <Card />
           <Card />
         </div>
       </section>
-      <section className="place-holder-div black">
+      <section className="contact-container">
         <div className="inner-container">
+          <h2>Me contacter</h2>
           <Card />
           <Card />
           <Card />
