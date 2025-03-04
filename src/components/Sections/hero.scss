@@ -1,10 +1,12 @@
+@import "../../stylesheets/Colors.scss";
+
 .hero-container {
     will-change: background-position;
     height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
-    background-image: url("../assets/Picto-Mosaic.png");
+    background-image: url("../../assets/Picto-Mosaic.png");
     background-size: 400px 400px;
     // animation: motion 300s linear infinite;
     &:before {
