@@ -1,6 +1,6 @@
 import "./hero.scss"
-import cloud1 from '../../assets/cloud1.png'
-import me from '../../assets/me.png'
+import cloud1 from '../../../assets/cloud1.png'
+import me from '../../../assets/me.png'
 
 export default function Hero () {
     return (

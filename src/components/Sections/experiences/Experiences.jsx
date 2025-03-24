@@ -1,5 +1,5 @@
 import "./experiences.scss"
-import Card from "../Card/Card.jsx"
+import Card from "../../Card/Card.jsx"
 
 export default function Experiences () {
     return (

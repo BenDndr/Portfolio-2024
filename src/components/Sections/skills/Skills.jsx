@@ -1,5 +1,5 @@
 import "./skills.scss"
-import GridCard from "../GridCard/GridCard"
+import GridCard from "../../GridCard/GridCard"
 
 export default function Skills () {
     return (

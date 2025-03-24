@@ -1,0 +1,21 @@
+@import "../../../stylesheets/Colors.scss";
+
+.hero-section {
+    height: 400vh;
+}
+
+.zoom-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    
+    .zooming-element {
+        width: 100px;
+        height: 100px;
+        background: $red-100;
+        transition: all .1s ease-out;
+    }
+}
