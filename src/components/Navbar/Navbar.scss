@@ -24,11 +24,10 @@ nav {
             display: flex;
             li {
                 margin: 0 20px;
-                border-color: $grey-900;
-                border-width: 2px;
-                border: solid;
+                border: 1px solid $grey-900;
                 padding: 10px 20px;
                 transition: all 0.3s ease-in-out;
+                cursor: pointer;
                 a {
                     text-decoration: none;
                     color: $grey-700;

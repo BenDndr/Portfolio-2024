@@ -14,7 +14,6 @@ const Navbar = () => {
             <li><a href="#experiences" onClick={() => console.log("experiences")}>Experiences</a></li>
             <li><a href="#contact" onClick={() => console.log("contact")}>Contact</a></li>
           </ul>
-          <a href="#"></a>
         </div>
       </nav>
     )
