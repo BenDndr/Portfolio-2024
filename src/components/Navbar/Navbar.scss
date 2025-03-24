@@ -16,8 +16,12 @@ nav {
         justify-content: space-between;
         height: 100%;
         .logo {
-            height: 40px;
+            height: 60px;
             cursor: pointer;
+            transition: transform .8s ease-in-out;
+            &:hover {
+                transform: rotate(360deg);
+            }
         }
         ul {
             list-style: none;
@@ -42,6 +46,7 @@ nav {
         }
     }
 }
+
 
 @media (max-width: 1320px) {
     nav {
