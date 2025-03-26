@@ -1,9 +1,9 @@
 .section-title {
-    margin-top: 60px;
+    margin: auto;
+    max-width: 1320px;
     .section-title-container {
+        margin-top: 60px;
         position: fixed;
-        margin: auto; // To fix
-        max-width: 1320px;
         width: 100%;
     }
     h2 {
