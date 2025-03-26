@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 export default function Hero2() {
 
   const [scale, setScale] = useState(1);
-  const [opacity, setOpacity] = useState(.2);
+  const [opacity, setOpacity] = useState(0);
 
   useEffect(() => {
         const handleScroll = () => {
@@ -23,13 +23,14 @@ export default function Hero2() {
     <section className="hero-section">
       <div className="inner-container">
         <div className="zoom-container">
-            <div className="zooming-element"
+            {/* <div className="zooming-element"
                 style={{
                     transform: `scale(${scale})`,
                     opacity: opacity,
                 }}
-            >
-            </div>
+                >
+                <p>Hello</p>
+            </div> */}
         </div>
       </div>
 

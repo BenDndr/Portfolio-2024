@@ -6,8 +6,7 @@ h1, h2, h3, p {
 
 h2 {
   font-size: 30px;
-  color: $blue-700;
-  text-align: center;
+  color: $grey-900;
 }
 
 body {
@@ -18,7 +17,7 @@ body {
 .inner-container {
   margin: auto;
   max-width: 1320px;
-  min-height: 100vh;
+  min-height: 300vh;
   width: 100%;
   padding: 2em 0;
 }

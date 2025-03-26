@@ -1,5 +1,6 @@
 import './stylesheets/App.scss'
 import Navbar from './components/Navbar/Navbar.jsx'
+import SectionTitle from './components/SectionTitle/SectionTitle.jsx'
 
 import Presentation from './components/Sections/presentation/Presentation.jsx'
 import Skills from './components/Sections/skills/Skills.jsx'
@@ -13,6 +14,7 @@ function App() {
   return (
     <main>
       <Navbar/>
+      <SectionTitle />
       <Hero2 />
       <Presentation />
       <Skills/>

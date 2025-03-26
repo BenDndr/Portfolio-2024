@@ -1,0 +1,15 @@
+.section-title {
+    margin-top: 60px;
+    .section-title-container {
+        position: fixed;
+        margin: auto; // To fix
+        max-width: 1320px;
+        width: 100%;
+    }
+    h2 {
+        font-size: 6rem;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        text-transform: uppercase;
+    }
+}
