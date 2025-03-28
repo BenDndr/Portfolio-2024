@@ -4,7 +4,7 @@ import {useState, useEffect} from "react";
 
 export default function SectionTitle () {
 
-    const [title, setTitle] = useState("Benjamin Dandre");
+    const [title, setTitle] = useState("");
 
     useEffect(() => {
 
@@ -15,7 +15,7 @@ export default function SectionTitle () {
         const handleScroll = () => {
             const scrollInVh = (window.scrollY / window.innerHeight) * 100;
             if (scrollInVh <= 400) {
-                changeEffect("Benjamin Dandre");
+                changeEffect("");
             } else if (scrollInVh > 400 && scrollInVh <= 700) {
                 changeEffect("Who am I");
             } else if (scrollInVh > 700 && scrollInVh <= 1000) {

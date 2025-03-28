@@ -22,16 +22,16 @@ export default function Hero2() {
   return (
     <section className="hero-section">
       <div className="inner-container">
-        <div className="zoom-container">
-            {/* <div className="zooming-element"
+        {/* <div className="zoom-container">
+            <div className="zooming-element"
                 style={{
                     transform: `scale(${scale})`,
                     opacity: opacity,
                 }}
                 >
                 <p>Hello</p>
-            </div> */}
-        </div>
+            </div>
+        </div> */}
       </div>
 
     </section>

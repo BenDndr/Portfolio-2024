@@ -15,17 +15,29 @@ nav {
         align-items: center;
         justify-content: space-between;
         height: 100%;
-        .logo {
-            height: 60px;
-            cursor: pointer;
-            transition: transform 1.2s ease-in-out;
-            &:hover {
-                transform: rotate(360deg);
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 11;
+            height: 100%;
+            .logo {
+                position: absolute;
+                z-index: 12;
+                height: 60px;
+                cursor: pointer;
+                transition: "transform 0.1s ease-out, left 0.1s ease-out, top 0.1s ease-out",
+                // transition: transform 1.2s ease-in-out;
+                // &:hover {
+                //     transform: rotate(360deg);
+                // }
             }
         }
         ul {
             list-style: none;
             display: flex;
+            z-index: 3;
             li {
                 margin: 0 20px;
                 border: 1px solid $grey-900;
