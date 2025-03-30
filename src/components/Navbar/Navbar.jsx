@@ -5,7 +5,8 @@ import { useState, useEffect } from "react";
 const Navbar = () => {
 
     const [scale, setScale] = useState(6);
-    const [position, setPosition] = useState({ left: (window.innerWidth / 2 - 180), top:  window.innerHeight / 4});
+    const [position, setPosition] = useState({ left: (window.innerWidth / 2 - 110), top:  window.innerHeight / 4});
+    const [titleOpacity, setTitleOpacity] = useState(0)
 
     console.log("window.innerWidth", window.innerWidth)
     console.log("window.innerHeight", window.innerHeight)
@@ -13,11 +14,13 @@ const Navbar = () => {
     useEffect(() => {
         const handleScroll = () => {
             const scrollY = window.scrollY;
-            const newScale = Math.max(1, 6 - scrollY / 200); 
-            const newLeft = Math.max(0, window.innerWidth / 2 - scrollY / 3);  
-            const newTop = Math.max(0, window.innerHeight / 4 - scrollY / 5); 
+            const newScale = Math.max(1, 6 - scrollY / 500);
+            const newLeft = Math.max(0, window.innerWidth / 2 - scrollY / 2 - 110);
+            const newTop = Math.max(0, window.innerHeight / 4 - scrollY / 6);
+            const newOpacity = 2 - newScale
             setScale(newScale);
             setPosition({ left: newLeft, top: newTop });
+            setTitleOpacity(newOpacity);
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -40,6 +43,7 @@ const Navbar = () => {
                     
                 }}    
             />
+            <p className="title" style={{opacity: titleOpacity}}>BENJAMIN DANDRE</p>
           </div>
           <ul>
             <li><a href="#hero" onClick={() => console.log("hero")}>Home</a></li>
