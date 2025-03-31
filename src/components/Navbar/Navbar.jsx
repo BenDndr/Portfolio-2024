@@ -5,17 +5,18 @@ import { useState, useEffect } from "react";
 const Navbar = () => {
 
     const [scale, setScale] = useState(6);
-    const [position, setPosition] = useState({ left: (window.innerWidth / 2 - 110), top:  window.innerHeight / 4});
+    const [position, setPosition] = useState({ left: (window.innerWidth > 1320 ? window.innerWidth / 2 - ((window.innerWidth - 1320) / 2) - 30 : window.innerWidth / 2 - 50), top:  window.innerHeight / 4});
     const [titleOpacity, setTitleOpacity] = useState(0)
 
-    console.log("window.innerWidth", window.innerWidth)
-    console.log("window.innerHeight", window.innerHeight)
+    console.log("window.innerWidth", window.innerWidth / 2)
+    // console.log("window.innerHeight", window.innerHeight)
+
 
     useEffect(() => {
         const handleScroll = () => {
             const scrollY = window.scrollY;
             const newScale = Math.max(1, 6 - scrollY / 450);
-            const newLeft = Math.max(0, window.innerWidth / 2 - scrollY / 1.5 - 110);
+            const newLeft = Math.max(0, (window.innerWidth > 1320 ? window.innerWidth / 2 - ((window.innerWidth - 1320) / 2) - 30 : window.innerWidth / 2 - 50) - scrollY / 1.3);
             const newTop = Math.max(0, window.innerHeight / 4 - scrollY / 4);
             const newOpacity = 2 - newScale
             setScale(newScale);

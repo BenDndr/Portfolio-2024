@@ -27,11 +27,7 @@ nav {
                 z-index: 12;
                 height: 60px;
                 cursor: pointer;
-                transition: transform 0.1s ease-out, left 0.1s ease-out, top 0.1s ease-out,
-                // transition: transform 1.2s ease-in-out;
-                // &:hover {
-                //     transform: rotate(360deg);
-                // }
+                transition: transform 0.1s ease-out, left 0.1s ease-out, top 0.1s ease-out;
             }
             .title {
                 margin-left: 70px;
@@ -60,6 +56,12 @@ nav {
                 }
             }
         }
+    }
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
     }
 }
 
