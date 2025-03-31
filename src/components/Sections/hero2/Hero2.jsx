@@ -23,12 +23,14 @@ export default function Hero2() {
     <section className="hero-section">
       <div className="inner-container">
         <div className="sticky-container">
-          <div className="left">
-            <h2>Benjamin Dandre</h2>
-          </div>
-          <div className="separator"></div>
-          <div className="right">
-            <h2>Développeur Web/mobile</h2>
+          <div className="hero-card">
+            <div className="left">
+              <h2>Benjamin Dandre</h2>
+            </div>
+            <div className="separator"></div>
+            <div className="right">
+              <h2>Developer Web/mobile</h2>
+            </div>
           </div>
         </div>
       </div>

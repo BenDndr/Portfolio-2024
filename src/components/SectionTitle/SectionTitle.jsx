@@ -14,9 +14,9 @@ export default function SectionTitle () {
 
         const handleScroll = () => {
             const scrollInVh = (window.scrollY / window.innerHeight) * 100;
-            if (scrollInVh <= 400) {
+            if (scrollInVh <= 350) {
                 changeEffect("");
-            } else if (scrollInVh > 400 && scrollInVh <= 700) {
+            } else if (scrollInVh > 350 && scrollInVh <= 700) {
                 changeEffect("Who am I");
             } else if (scrollInVh > 700 && scrollInVh <= 1000) {
                 changeEffect("What can I do");

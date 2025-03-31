@@ -14,9 +14,9 @@ const Navbar = () => {
     useEffect(() => {
         const handleScroll = () => {
             const scrollY = window.scrollY;
-            const newScale = Math.max(1, 6 - scrollY / 500);
-            const newLeft = Math.max(0, window.innerWidth / 2 - scrollY / 2 - 110);
-            const newTop = Math.max(0, window.innerHeight / 4 - scrollY / 6);
+            const newScale = Math.max(1, 6 - scrollY / 450);
+            const newLeft = Math.max(0, window.innerWidth / 2 - scrollY / 1.5 - 110);
+            const newTop = Math.max(0, window.innerHeight / 4 - scrollY / 4);
             const newOpacity = 2 - newScale
             setScale(newScale);
             setPosition({ left: newLeft, top: newTop });
