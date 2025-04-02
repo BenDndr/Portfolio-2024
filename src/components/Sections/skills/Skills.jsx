@@ -1,21 +1,77 @@
 import "./skills.scss"
-import GridCard from "../../GridCard/GridCard"
+import {useEffect, useState} from "react";
+// import GridCard from "../../GridCard/GridCard"
 
 export default function Skills () {
+
+    const [category, setCategory] = useState("Front-end")
+    const frontSkills = [
+        {name: "JavaScript", img: "#"},
+        {name: "TypeScript", img: "#"},
+        {name: "HTML", img: "#"},
+        {name: "CSS", img: "#"},
+        {name: "ReactJs", img: "#"},
+        {name: "React-Native", img: "#"},
+    ]
+    const backSkills = [
+        {name: "Ruby", img: "#"},
+        {name: "Rails", img: "#"},
+        {name: "NodeJs", img: "#"},
+    ]
+    const otherSkills = [
+        {name: "Git", img: "#"},
+        {name: "Github", img: "#"},
+        {name: "Figma", img: "#"},
+        
+    ]
+    const [skills, setSkills] = useState(frontSkills)
+
+    useEffect(() => {
+
+        const changeEffect = (newCategory) => {
+            setCategory(newCategory);
+        }
+
+        const handleScroll = () => {
+            const scrollInVh = (window.scrollY / window.innerHeight) * 100;
+            if (scrollInVh <= 750) {
+                changeEffect("Front-end");
+                setSkills(frontSkills)
+            } else if (scrollInVh > 750 && scrollInVh <= 850) {
+                changeEffect("Back-end");
+                setSkills(backSkills)
+            } else if (scrollInVh > 850 && scrollInVh <= 950) {
+                changeEffect("Other");
+                setSkills(otherSkills)
+            }
+        }
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [])
+
     return (
         <section className="skills-container">
-        <div className="inner-container">
-          <h2>Mon expertise</h2>
-          <div className="skill-grid">
-            <GridCard col={"1/5"} row={"1/2"} imgUrl={"./public/react.svg"}>Javascript/Typescript</GridCard>
-            <GridCard col={"1/5"} row={"2/3"} imgUrl={"./public/vite.svg"}>Html/Css</GridCard>
-            <GridCard col={"5/9"} row={"1/3"} imgUrl={"./public/react.svg"}>React-Native</GridCard>
-            <GridCard col={"1/5"} row={"3/5"} imgUrl={"./public/react.svg"} name="React">React</GridCard>
-            <GridCard col={"5/7"} row={"3/4"} imgUrl={"./public/vite.svg"} name="Vite">NodeJs</GridCard>
-            <GridCard col={"5/7"} row={"4/5"} imgUrl={"./public/react.svg"} name="React">SQL</GridCard>
-            <GridCard col={"7/9"} row={"3/5"} imgUrl={"./public/vite.svg"} name="Vite">Ruby on Rails</GridCard>
-          </div>
-        </div>
+            <div className="inner-container">
+                <div className="sticky-part">
+                    <div className="left">
+                    <p>{category}</p>
+                    </div>
+                    <div className="separator"/>
+                    <div className="right">
+                        {
+                            skills.map(skill => {
+                                return (
+                                    <div className="skill" key={skill.name}>
+                                        <img src={"#"}/>
+                                        <p>{skill.name}</p>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                </div>
+            </div>
       </section>
     )
 }
